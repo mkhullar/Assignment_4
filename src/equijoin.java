@@ -14,8 +14,7 @@ public class equijoin
         private Text tuples = new Text();
 
         public void map(LongWritable key, Text value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
-            //Read the  row and Split
-            // gets the relation name, joining key and tuple
+            //Read the row and Split
             String row[] = value.toString().split(",");
 
             //The tuple added
@@ -44,7 +43,8 @@ public class equijoin
             {
                 tempVal = values.next().toString();
                 String Split[] = tempVal.split(",");
-                //checks for the joining key and add it separately in a table
+
+                //checks for the joining key and adding it separately
                 if(Split[0].equals("S")){
                     sArrList.add(tempVal);
                 }
