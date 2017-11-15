@@ -18,7 +18,7 @@ public class equijoin
             // gets the relation name, joining key and tuple
             String row[] = value.toString().split(",");
 
-            //The tuple added with its relation name
+            //The tuple added
             StringBuilder tuple = new StringBuilder(row[0]);
 
             for (int i=1;i<row.length;i++)
